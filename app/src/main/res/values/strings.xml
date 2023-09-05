@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ActivityTest</string>
+    <string name="XY轴数据">XY轴数据</string>
+    <string name="当前方向">当前方向：</string>
+    <string name="当前角度">当前角度：</string>
+    <string name="当前偏移级别">当前偏移级别：</string>
+    <drawable name="unpressed">#F44336</drawable>
+    <drawable name="pressed">#C6993E01</drawable>
+</resources>

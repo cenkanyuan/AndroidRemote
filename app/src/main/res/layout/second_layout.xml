@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rocker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/XY轴数据"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/directionXY_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/当前方向"/>
+
+        <TextView
+            android:id="@+id/angleXY_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/当前角度"/>
+
+        <TextView
+            android:id="@+id/levelXY_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/当前偏移级别"/>
+
+    </LinearLayout>
+
+
+<!--    摇杆控件-->
+    <com.shy.rockerview.MyRockerView
+        android:id="@+id/rockerXY_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        rocker:areaBackground="@color/black"
+        rocker:rockerBackground="@color/white"
+        rocker:rockerCallBackMode="CALL_BACK_MODE_STATE_CHANGE"
+        rocker:rockerScale="0.5"
+        rocker:rockerSpeedLevel="10" />
+
+    <GridLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp">
+        <Button
+            android:id="@+id/round_Button_A"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:background="@drawable/bt_selector"
+            android:text="A"/>
+        <Button
+            android:id="@+id/round_Button_B"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:background="@drawable/bt_selector"
+            android:text="B"/>
+        <Button
+            android:id="@+id/round_Button_X"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="@drawable/bt_selector"
+            android:text="X"/>
+        <Button
+            android:id="@+id/round_Button_Y"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="@drawable/bt_selector"
+            android:text="Y"/>
+    </GridLayout>
+
+
+</RelativeLayout>
